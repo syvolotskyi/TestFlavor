@@ -16,41 +16,29 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
-
     buildTypes {
-        release {
+        "_production" {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        "_debug" {
+            applicationIdSuffix ".debug"
+            debuggable true
+        }
     }
 
-    signingConfigs {
-        georgia {
-            storeFile file('../keystores/georgian/georgian_jks.jks')
-            storePassword 'Space1234%'
-            keyPassword 'Space1234%'
-            keyAlias 'SPACEGEO'
-        }
-        uzbekistan {
-            storeFile file('../keystores/uzbekistan/uzbekistan_jks.jks')
-            storePassword 'Space1234%'
-            keyPassword 'Space1234%'
-            keyAlias 'SPACEUZB'
-        }
-    }
+
 
     publishNonDefault true
     flavorDimensions "country"
     productFlavors {
         "GEORGIA" {
             dimension 'country'
-            signingConfig signingConfigs.georgia
 
         }
 
         "UZBEKISTAN" {
             dimension 'country'
-            signingConfig signingConfigs.uzbekistan
         }
     }
     compileOptions {

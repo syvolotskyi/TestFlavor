@@ -18,8 +18,6 @@ android {
     }
 
 
-
-
     publishNonDefault true
     flavorDimensions "country"
     productFlavors {

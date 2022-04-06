@@ -16,16 +16,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
-    buildTypes {
-        "_production" {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-        "_debug" {
-            applicationIdSuffix ".debug"
-            debuggable true
-        }
-    }
+
 
 
 
@@ -34,11 +25,13 @@ android {
     productFlavors {
         "GEORGIA" {
             dimension 'country'
+            applicationId 'ge.space.design.georgia'
 
         }
 
         "UZBEKISTAN" {
             dimension 'country'
+            applicationId 'ge.space.design.uzbekistan'
         }
     }
     compileOptions {

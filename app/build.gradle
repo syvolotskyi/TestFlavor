@@ -32,34 +32,19 @@ android {
     buildFeatures {
         viewBinding true
     }
-    signingConfigs {
-        georgia {
-            storeFile file('../keystores/georgian/georgian_jks.jks')
-            storePassword 'Space1234%'
-            keyPassword 'Space1234%'
-            keyAlias 'SPACEGEO'
-        }
-        uzbekistan {
-            storeFile file('../keystores/uzbekistan/uzbekistan_jks.jks')
-            storePassword 'Space1234%'
-            keyPassword 'Space1234%'
-            keyAlias 'SPACEUZB'
-        }
-    }
+
 
     flavorDimensions "country"
     productFlavors {
         "GEORGIA" {
             dimension 'country'
             applicationId 'ge.space.design.georgia'
-            signingConfig signingConfigs.georgia
 
         }
 
         "UZBEKISTAN" {
             dimension 'country'
             applicationId 'ge.space.design.uzbekistan'
-            signingConfig signingConfigs.uzbekistan
         }
     }
 }

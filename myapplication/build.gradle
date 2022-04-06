@@ -23,13 +23,11 @@ android {
     productFlavors {
         "GEORGIA" {
             dimension 'country'
-            applicationId 'ge.space.design.georgia'
 
         }
 
         "UZBEKISTAN" {
             dimension 'country'
-            applicationId 'ge.space.design.uzbekistan'
         }
     }
     compileOptions {
